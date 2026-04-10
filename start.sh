@@ -1,1 +1,1 @@
-bash start
+python -m Anony 
