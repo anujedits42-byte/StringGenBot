@@ -18,8 +18,8 @@ class Pyro(Client):
     def __init__(self):
         super().__init__(
             name="StringSession",
-            api_id=6,
-            api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
+            api_id=34446649,
+            api_hash="8dc570c08d8e35e88fb9bfc73c65d7fa",
             lang_code="en",
             bot_token=config.BOT_TOKEN,
             parse_mode=enums.ParseMode.HTML,
