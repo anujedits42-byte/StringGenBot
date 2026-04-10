@@ -44,7 +44,7 @@ async def _gen_session(_, cq: types.CallbackQuery):
     phone_number = await listen(cq, "Please enter your <b>phone number</b> to proceed:")
     await cq.message.reply_text("Trying to send otp at the given number...")
     client = (
-        Client(name="Anony", api_id=api_id, api_hash=api_hash, in_memory=True)
+        Client(name="𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫", api_id=api_id, api_hash=api_hash, in_memory=True)
         if pyrogram
         else TelegramClient(StringSession(), api_id, api_hash)
     )
@@ -95,7 +95,7 @@ async def _gen_session(_, cq: types.CallbackQuery):
          return await cq.message.reply_text(f"Error : <code>{str(ex)}</code>")
 
     try:
-        txt = "Here is your {0} session\n\n<code>{1}</code>\n\nA session generator bot by <a href={2}>Fallen Association</a>\n☠ <b>Note :</b> Don't share the session with anyone."
+        txt = "Here is your {0} session\n\n<code>{1}</code>\n\nA session generator bot by <a href={2}>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>\n☠ <b>Note :</b> Don't share the session with anyone."
         if pyrogram:
             string_session = await client.export_session_string()
             await client.send_message(
@@ -104,7 +104,7 @@ async def _gen_session(_, cq: types.CallbackQuery):
                 link_preview_options=types.LinkPreviewOptions(is_disabled=True),
             )
             try:
-                await client.join_chat("FallenAssociation")
+                await client.join_chat("log_channel_a")
             except:
                 pass
         else:
@@ -116,13 +116,13 @@ async def _gen_session(_, cq: types.CallbackQuery):
                 parse_mode="html",
             )
             try:
-                await client(JoinChannelRequest("@FallenAssociation"))
+                await client(JoinChannelRequest("@log_channel_a"))
             except:
                 pass
     except KeyError:
         pass
     try:
         await client.disconnect()
-        await cq.message.reply_text(f"Successfully generated your {sgen} string session.\n\nPlease check your saved messages for getting it.\n\nA string generator bot by <a href={SUPPORT_CHAT}>Fallen Association</a>.", reply_markup=buttons.pm_key(cq.from_user.id))
+        await cq.message.reply_text(f"Successfully generated your {sgen} string session.\n\nPlease check your saved messages for getting it.\n\nA string generator bot by <a href={SUPPORT_CHAT}>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>.", reply_markup=buttons.pm_key(cq.from_user.id))
     except:
         pass
