@@ -2,6 +2,8 @@ from pyrogram import filters, types
 
 from anony import app, buttons, db
 
+PHOTO_URL = "https://o.uguu.se/buNPcLrC.jpg"
+
 @app.on_message(filters.command(["start"]) & filters.private)
 async def f_start(_, m: types.Message):
     await m.reply_text(
